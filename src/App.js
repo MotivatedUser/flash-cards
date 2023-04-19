@@ -13,6 +13,7 @@ import responsiveFlashcards from './data/responsive';
 import vueFlashcards from './data/vue';
 import './App.css';
 import nodeFlashcards from './data/node';
+import { beforeInterviewFlashcards, duringInterviewFlashcards, onlineInterviewFlashcards } from './data/interviewPrep';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
@@ -26,7 +27,8 @@ function App() {
     { id: '7', name: 'Performance' },
     { id: '8', name: 'React' },
     { id: '9', name: 'Responsive' },
-    { id: '10', name: 'Vue' }
+    { id: '10', name: 'Vue' },
+    { id: '11', name: 'Interview Prep'}
     // Add more categories here
   ];
 
@@ -40,39 +42,107 @@ function App() {
     }
   
     if (selectedCategory === '1') {
-      return accessibilityFlashcards;
+      return [
+        {
+        heading: 'Accessibility',
+        flashcards: accessibilityFlashcards,
+        }
+      ]
     }
     if (selectedCategory === '2') {
-      return angularFlashcards;
+      return [
+        {
+        heading: 'Angular',
+        flashcards: angularFlashcards,
+        }
+      ]
     }
     if (selectedCategory === '3') {
-      return cssFlashcards;
+      return [
+        {
+        heading: 'CSS',
+        flashcards: cssFlashcards,
+        }
+      ]
     }
     if (selectedCategory === '4') {
-      return htmlFlashcards;
+      return [
+        {
+        heading: 'HTML',
+        flashcards: htmlFlashcards,
+        }
+      ]
     }
     if (selectedCategory === '5') {
-      return jsFlashcards;
+      return [
+        {
+        heading: 'JavaScript',
+        flashcards: jsFlashcards,
+        }
+      ]
     }
     if (selectedCategory === '6') {
-      return nodeFlashcards;
+      return [
+        {
+        heading: 'Node.js',
+        flashcards: nodeFlashcards,
+        }
+      ]
     }
     if (selectedCategory === '7') {
-      return performanceFlashcards;
+      return [
+        {
+        heading: 'Performance',
+        flashcards: performanceFlashcards,
+        }
+      ]
     }
     if (selectedCategory === '8') {
-      return reactFlashcards;
+      return [
+        {
+        heading: 'React',
+        flashcards: reactFlashcards,
+        }
+      ]
     }
     if (selectedCategory === '9') {
-      return responsiveFlashcards;
+      return [
+        {
+        heading: 'Responsive',
+        flashcards: responsiveFlashcards,
+        }
+      ]
     }
     if (selectedCategory === '10') {
-      return vueFlashcards;
+      return [
+        {
+        heading: 'Vue',
+        flashcards: vueFlashcards,
+        }
+      ]
     }
-    // Add more conditions to return flashcards for other categories
+    if (selectedCategory === '11') {
+      return [
+        {
+          heading: 'Before the Interview',
+          flashcards: beforeInterviewFlashcards,
+        },
+        {
+          heading: 'During the Interview',
+          flashcards: duringInterviewFlashcards,
+        },
+        {
+          heading: 'Preparing for an Online Interview',
+          flashcards: onlineInterviewFlashcards,
+        },
+      ];
+    }
+    
+  }
+      // Add more conditions to return flashcards for other categories
   
-    return [];
-  };
+  
+  
 
   return (
     <div className="App">
