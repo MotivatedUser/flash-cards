@@ -5,7 +5,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        Frontend Interview Flashcards
+        <h1>Frontend Interview Flashcards</h1>
+        <p>by Doug Altermatt</p>
       </div>
     </nav>
   );
