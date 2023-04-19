@@ -14,6 +14,7 @@ import vueFlashcards from './data/vue';
 import './App.css';
 import nodeFlashcards from './data/node';
 import { beforeInterviewFlashcards, duringInterviewFlashcards, onlineInterviewFlashcards } from './data/interviewPrep';
+import { behavioralQuestions, communicationQuestions, competencyQuestions, opinionQuestions } from './data/interviewTopQuestions';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
@@ -28,7 +29,8 @@ function App() {
     { id: '8', name: 'React' },
     { id: '9', name: 'Responsive' },
     { id: '10', name: 'Vue' },
-    { id: '11', name: 'Interview Prep'}
+    { id: '11', name: 'Interview Prep'},
+    { id: '12', name: 'Interview Prep Questions' }
     // Add more categories here
   ];
 
@@ -138,6 +140,26 @@ function App() {
       ];
     }
     
+    if (selectedCategory === '12') {
+      return [
+        {
+          heading:'Competency',
+          flashcards: competencyQuestions,
+        },
+        {
+          heading:'Communication',
+          flashcards: communicationQuestions,
+        },
+        {
+          heading:'Opinion',
+          flashcards: opinionQuestions,
+        },
+        {
+          heading:'Behavioral',
+          flashcards: behavioralQuestions,
+        },
+      ]
+    }
   }
       // Add more conditions to return flashcards for other categories
   
