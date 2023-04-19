@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(171, 149, 253);
 }
 
 /* Navbar */
@@ -75,7 +76,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
-  gap: 20px;
+  gap: 40px;
 }
 
 /* Category Selector */
