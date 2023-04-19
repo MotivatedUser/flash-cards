@@ -8,10 +8,21 @@ const Flashcard = ({ flashcard }) => {
     setIsFlipped(!isFlipped);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      handleFlip();
+    }
+  };
+
   return (
     <div
       className={`flashcard ${isFlipped ? 'flipped' : ''}`}
       onClick={handleFlip}
+      onKeyPress={handleKeyPress}
+      tabIndex="0"
+      role="button"
+      aria-pressed={isFlipped}
+      aria-label={isFlipped ? 'Collapse card' : 'Expand card'}
     >
       <div className="flashcard-inner">
         <div className="flashcard-front">

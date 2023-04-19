@@ -10,7 +10,7 @@
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -19,6 +19,17 @@
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 

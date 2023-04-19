@@ -4,10 +4,10 @@ import '../../src/App.css';
 
 const FlashcardList = ({ flashcards }) => {
     return (
-      <div className="flashcard-list">
+      <div className="flashcard-list" role='list'>
         {flashcards &&
           flashcards.map((section) => (
-            <div key={section.heading} className="flashcard-section">
+            <div key={section.heading} className="flashcard-section" role='listitem' >
               <h2>{section.heading}</h2>
               <div className="flashcard-container">
                 {section.flashcards.map((flashcard) => (
