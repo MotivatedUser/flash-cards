@@ -137,6 +137,24 @@ const accessibilityFlashcards = [
         answer:
         '1. Using non-semantic elements for interactive components.\n2. Not managing focus when rendering or updating components.\n3. Relying on CSS to hide content without considering its impact on assistive technologies.\n4. Using inline styles that may override user-defined styles or cause accessibility issues.\n5. Creating custom components without considering ARIA roles, states, and properties, or keyboard interactions.',
         },
+        {
+            id: '24',
+            question: 'How can you use React hooks to improve accessibility?',
+            answer:
+            'React hooks, like useState(), useEffect(), useRef(), and useContext(), can be used to manage focus, store and retrieve user preferences, or handle keyboard interactions in functional components. By using hooks, you can create custom, reusable accessibility-related logic that can be easily integratedinto your React components, making them more accessible and user-friendly.',
+        },
+        {
+        id: '25',
+        question: 'What is the role of keyboard navigation in web accessibility?',
+        answer:
+        'Keyboard navigation is critical for people with disabilities who cannot use a mouse or other pointing device to interact with web content. It is also important for users who prefer using keyboard shortcuts or have limited mobility. Keyboard navigation allows users to navigate, interact with, and control web content using only the keyboard, making it a fundamental aspect of web accessibility.',
+        },
+        {
+        id: '26',
+        question: 'How can you ensure that your React application meets accessibility standards?',
+        answer:
+        '1. Use automated testing tools, such as React Axe or react-a11y, to identify accessibility issues in your components.\n2. Test your application with screen readers, keyboard navigation, and different browsers and devices.\n3. Follow the Web Content Accessibility Guidelines (WCAG) to ensure your application meets the necessary accessibility standards.\n4. Conduct manual accessibility audits and engage users with disabilities to get feedback on your application.\n5. Continuously monitor and improve the accessibility of your application as you add new features or components.',
+        },
     // ...more flashcards
   ];
   
