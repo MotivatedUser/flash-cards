@@ -18,6 +18,7 @@ import { behavioralQuestions, communicationQuestions, competencyQuestions, opini
 import accessibilityQuiz from './data/accessibilityQuiz';
 import angularQuiz from './data/angularQuiz';
 import cssQuiz from './data/cssQuiz';
+import htmlQuiz from './data/htmlQuiz';
 import Quiz from './components/Quiz';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
     { id: '3', name: 'CSS' },
     { id: '103', name: 'CSS Quiz' },
     { id: '4', name: 'HTML' },
+    { id: '104', name: 'HTML Quiz'},
     { id: '5', name: 'JavaScript' },
     { id: '6', name: 'Node.js' },
     { id: '7', name: 'Performance' },
@@ -180,6 +182,8 @@ function App() {
             return angularQuiz;
           case '103':
             return cssQuiz;
+          case '104':
+            return htmlQuiz;
           // Add more cases for other quiz categories
           default:
             return [];
