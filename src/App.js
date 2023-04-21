@@ -16,6 +16,7 @@ import nodeFlashcards from './data/node';
 import { beforeInterviewFlashcards, duringInterviewFlashcards, onlineInterviewFlashcards } from './data/interviewPrep';
 import { behavioralQuestions, communicationQuestions, competencyQuestions, opinionQuestions } from './data/interviewTopQuestions';
 import accessibilityQuiz from './data/accessibilityQuiz';
+import angularQuiz from './data/angularQuiz';
 import Quiz from './components/Quiz';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     { id: '1', name: 'Accessibility' },
     { id: '101', name: 'Accessibility Quiz'},
     { id: '2', name: 'Angular' },
+    { id: '102', name: 'Angular Quiz' },
     { id: '3', name: 'CSS' },
     { id: '4', name: 'HTML' },
     { id: '5', name: 'JavaScript' },
@@ -172,6 +174,8 @@ function App() {
         switch (selectedCategory) {
           case '101':
             return accessibilityQuiz;
+          case '102':
+            return angularQuiz;
           // Add more cases for other quiz categories
           default:
             return [];
