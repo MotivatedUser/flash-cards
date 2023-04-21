@@ -15,11 +15,15 @@ import './App.css';
 import nodeFlashcards from './data/node';
 import { beforeInterviewFlashcards, duringInterviewFlashcards, onlineInterviewFlashcards } from './data/interviewPrep';
 import { behavioralQuestions, communicationQuestions, competencyQuestions, opinionQuestions } from './data/interviewTopQuestions';
+import accessibilityQuiz from './data/accessibilityQuiz';
+import Quiz from './components/Quiz';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
+  const [quizMode, setQuizMode] = useState(false);
   const categories = [
     { id: '1', name: 'Accessibility' },
+    { id: '101', name: 'Accessibility Quiz'},
     { id: '2', name: 'Angular' },
     { id: '3', name: 'CSS' },
     { id: '4', name: 'HTML' },
@@ -36,6 +40,7 @@ function App() {
 
   const handleSelectCategory = (categoryId) => {
     setSelectedCategory(categoryId);
+    setQuizMode(categoryId >= 100)
   };
 
   const getFlashcards = () => {
@@ -163,20 +168,38 @@ function App() {
   }
       // Add more conditions to return flashcards for other categories
   
-  
+      const getQuizData = () => {
+        switch (selectedCategory) {
+          case '101':
+            return accessibilityQuiz;
+          // Add more cases for other quiz categories
+          default:
+            return [];
+        }
+      };
   
 
-  return (
-    <div className="App">
-      <Navbar />
-      <CategorySelector
-        categories={categories}
-        selectedCategory={selectedCategory}
-        onSelectCategory={handleSelectCategory}
-      />
-      <FlashcardList flashcards={getFlashcards()} />
-    </div>
-  );
+      return (
+        <div className="App">
+          <Navbar />
+          <CategorySelector
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onSelectCategory={handleSelectCategory}
+          />
+          {quizMode ? (
+            <Quiz
+              quizData={getQuizData()}
+              onFinish={(score) => {
+                alert(`Quiz finished! Your score is: ${score}`);
+                setQuizMode(false);
+              }}
+            />
+          ) : (
+            <FlashcardList flashcards={getFlashcards()} />
+          )}
+        </div>
+      );
 }
 
 export default App;
