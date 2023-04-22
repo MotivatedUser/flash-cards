@@ -50,6 +50,8 @@ import webSecurityQuiz from "./data/webSecurityQuiz";
 import webAPIQuiz from "./data/webAPIQuiz";
 import testAndDebugQuiz from "./data/testAndDebugQuiz";
 import versionControlQuiz from "./data/versionControlQuiz";
+import typescriptQuiz from "./data/typescriptQuiz";
+import progressiveWebAPIQuiz from "./data/pwiQuiz";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("1");
@@ -88,10 +90,15 @@ function App() {
     { id: "17", name: "Version Control" },
     { id: '117', name: 'Version Control Quiz' },
     { id: "18", name: "TypeScript" },
+    { id: "118", name: "TypeScript Quiz" },
     { id: "19", name: "Progressive Web APIs" },
+    { id: "119", name: "PWI Quiz" },
     { id: "20", name: "Server-side Rendering" },
+    { id: "120", name: "Server-side Rendering Quiz" },
     { id: "21", name: "GraphQL" },
-    { id: "22", name: "UX / UI" },
+    { id: "121", name: "GraphQL Quiz" },
+    { id: "22", name: "UX / UI" }, 
+    { id: "222", name: "UX / UI Quiz" },
     // Add more categories here
   ];
 
@@ -337,6 +344,10 @@ function App() {
         return testAndDebugQuiz;
       case "117":
         return versionControlQuiz;
+      case "118":
+        return typescriptQuiz;
+      case "119":
+        return progressiveWebAPIQuiz;
       // Add more cases for other quiz categories
       default:
         return [];
