@@ -23,6 +23,8 @@ import webSecurity from './data/webSecurity';
 import webAPIFlashcards from './data/webAPI';
 import Quiz from './components/Quiz';
 import designPatternsFlashcards from './data/designPatterns';
+import testAndDebugFlashcards from './data/testAndDebug';
+import versionControlFlashcards from './data/versionControl';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
@@ -46,7 +48,9 @@ function App() {
     { id: '12', name: 'Interview Prep Questions' },
     { id: '13', name: 'Web Security'},
     { id: '14', name: 'Web APIs'},
-    { id: '15', name: 'Design Patterns'}
+    { id: '15', name: 'Design Patterns'},
+    { id: '16', name: 'Testing and Debugging'},
+    { id: '17', name: 'Version Control'}
     // Add more categories here
   ];
 
@@ -198,6 +202,22 @@ function App() {
         {
         heading: 'Design Patterns',
         flashcards: designPatternsFlashcards,
+        }
+      ]
+    }
+    if (selectedCategory === '16') {
+      return [
+        {
+        heading: 'Testing and Debugging',
+        flashcards: testAndDebugFlashcards,
+        }
+      ]
+    }
+    if (selectedCategory === '17') {
+      return [
+        {
+        heading: 'Version Control',
+        flashcards: versionControlFlashcards,
         }
       ]
     }
