@@ -47,6 +47,9 @@ import reactQuiz from "./data/reactQuiz";
 import responsiveQuiz from "./data/responsiveQuiz";
 import vueQuiz from "./data/vueQuiz";
 import webSecurityQuiz from "./data/webSecurityQuiz";
+import webAPIQuiz from "./data/webAPIQuiz";
+import testAndDebugQuiz from "./data/testAndDebugQuiz";
+import versionControlQuiz from "./data/versionControlQuiz";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("1");
@@ -77,10 +80,13 @@ function App() {
     { id: "13", name: "Web Security" },
     { id: '113', name: 'Web Security Quiz' },
     { id: "14", name: "Web APIs" },
+    { id: "114", name: "Web API's Quiz"},
     { id: "15", name: "Design Patterns" },
     { id: "115", name: "Design Patterns Quiz" },
     { id: "16", name: "Testing and Debugging" },
+    { id: '116', name: 'Test and Debugging Quiz' },
     { id: "17", name: "Version Control" },
+    { id: '117', name: 'Version Control Quiz' },
     { id: "18", name: "TypeScript" },
     { id: "19", name: "Progressive Web APIs" },
     { id: "20", name: "Server-side Rendering" },
@@ -323,8 +329,14 @@ function App() {
         return vueQuiz;
       case '113':
         return webSecurityQuiz;
+      case '114':
+        return webAPIQuiz;
       case "115":
         return designPatternsQuiz;
+      case "116":
+        return testAndDebugQuiz;
+      case "117":
+        return versionControlQuiz;
       // Add more cases for other quiz categories
       default:
         return [];
