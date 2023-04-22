@@ -14,7 +14,7 @@ const Quiz = ({ quizData, onFinish }) => {
         setTimer((t) => {
           if (t === 0) {
             clearInterval(timerInterval);
-            onFinish(score); // Add this line
+            onFinish(score);
             return 0;
           }
           return t - 1;
@@ -43,7 +43,7 @@ const Quiz = ({ quizData, onFinish }) => {
     <div className="quiz">
       {!quizStarted ? (
         <div className="start-quiz">
-          <button onClick={() => setQuizStarted(true)}>Start Quiz</button>
+          <button className="quiz-button" onClick={() => setQuizStarted(true)}>Start Quiz</button>
         </div>
       ) : (
         <>
@@ -63,7 +63,7 @@ const Quiz = ({ quizData, onFinish }) => {
                 </label>
               ))}
             </div>
-            <button onClick={handleSubmit}>Submit</button>
+            <button className="quiz-button sticky-button" onClick={handleSubmit}>Submit</button>
           </div>
         </>
       )}

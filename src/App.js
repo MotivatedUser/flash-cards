@@ -34,6 +34,7 @@ import designPatternsQuiz from './data/designPatternsQuiz';
 import javascriptQuiz from './data/javascriptQuiz';
 import nodeQuiz from './data/nodeQuiz';
 import performanceQuiz from './data/performanceQuiz';
+import reactQuiz from './data/reactQuiz';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
@@ -54,6 +55,7 @@ function App() {
     { id: '7', name: 'Performance' },
     { id: '107', name: 'Performance Quiz' },
     { id: '8', name: 'React' },
+    { id: '108', name: 'React Quiz' },
     { id: '9', name: 'Responsive' },
     { id: '10', name: 'Vue' },
     { id: '11', name: 'Interview Prep'},
@@ -297,7 +299,9 @@ function App() {
           case '106':
             return nodeQuiz;
           case '107':
-            return performanceQuiz
+            return performanceQuiz;
+            case '108':
+              return reactQuiz;
           case '115':
             return designPatternsQuiz;
           // Add more cases for other quiz categories
