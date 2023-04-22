@@ -25,6 +25,8 @@ import Quiz from './components/Quiz';
 import designPatternsFlashcards from './data/designPatterns';
 import testAndDebugFlashcards from './data/testAndDebug';
 import versionControlFlashcards from './data/versionControl';
+import typescriptFlashcards from './data/typescript';
+import progressiveWebAPIFlashcards from './data/progressiveWebAPI';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
@@ -50,7 +52,9 @@ function App() {
     { id: '14', name: 'Web APIs'},
     { id: '15', name: 'Design Patterns'},
     { id: '16', name: 'Testing and Debugging'},
-    { id: '17', name: 'Version Control'}
+    { id: '17', name: 'Version Control'},
+    { id: '18', name: 'TypeScript'},
+    { id: '19', name: 'Progressive Web APIs'}
     // Add more categories here
   ];
 
@@ -218,6 +222,22 @@ function App() {
         {
         heading: 'Version Control',
         flashcards: versionControlFlashcards,
+        }
+      ]
+    }
+    if (selectedCategory === '18') {
+      return [
+        {
+        heading: 'TypeScript',
+        flashcards: typescriptFlashcards,
+        }
+      ]
+    }
+    if (selectedCategory === '19') {
+      return [
+        {
+        heading: 'Progressive Web APIs',
+        flashcards: progressiveWebAPIFlashcards,
         }
       ]
     }
