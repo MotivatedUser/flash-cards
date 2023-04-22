@@ -30,6 +30,8 @@ import progressiveWebAPIFlashcards from './data/progressiveWebAPI';
 import serverSideRenderingFlashcards from './data/serverSideRendering';
 import graphQLFlashcards from './data/graphQL';
 import uxUIFlashcards from './data/uxUI';
+import designPatternsQuiz from './data/designPatternsQuiz';
+import javascriptQuiz from './data/javascriptQuiz';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
@@ -44,6 +46,7 @@ function App() {
     { id: '4', name: 'HTML' },
     { id: '104', name: 'HTML Quiz'},
     { id: '5', name: 'JavaScript' },
+    { id: '105', name: 'JavaScript Quiz'},
     { id: '6', name: 'Node.js' },
     { id: '7', name: 'Performance' },
     { id: '8', name: 'React' },
@@ -54,13 +57,14 @@ function App() {
     { id: '13', name: 'Web Security'},
     { id: '14', name: 'Web APIs'},
     { id: '15', name: 'Design Patterns'},
+    { id: '115', name: 'Design Patterns Quiz'},
     { id: '16', name: 'Testing and Debugging'},
     { id: '17', name: 'Version Control'},
     { id: '18', name: 'TypeScript'},
     { id: '19', name: 'Progressive Web APIs'},
     { id: '20', name: 'Server-side Rendering' },
     { id: '21', name: 'GraphQL'},
-    { id: '22', name: 'UX / UI'}
+    { id: '22', name: 'UX / UI' },
     // Add more categories here
   ];
 
@@ -284,6 +288,10 @@ function App() {
             return cssQuiz;
           case '104':
             return htmlQuiz;
+          case '105':
+            return javascriptQuiz;
+          case '115':
+            return designPatternsQuiz;
           // Add more cases for other quiz categories
           default:
             return [];
