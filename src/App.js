@@ -22,6 +22,7 @@ import htmlQuiz from './data/htmlQuiz';
 import webSecurity from './data/webSecurity';
 import webAPIFlashcards from './data/webAPI';
 import Quiz from './components/Quiz';
+import designPatternsFlashcards from './data/designPatterns';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
@@ -44,7 +45,8 @@ function App() {
     { id: '11', name: 'Interview Prep'},
     { id: '12', name: 'Interview Prep Questions' },
     { id: '13', name: 'Web Security'},
-    { id: '14', name: 'Web APIs'}
+    { id: '14', name: 'Web APIs'},
+    { id: '15', name: 'Design Patterns'}
     // Add more categories here
   ];
 
@@ -188,6 +190,14 @@ function App() {
         {
         heading: 'Web APIs',
         flashcards: webAPIFlashcards,
+        }
+      ]
+    }
+    if (selectedCategory === '15') {
+      return [
+        {
+        heading: 'Design Patterns',
+        flashcards: designPatternsFlashcards,
         }
       ]
     }
