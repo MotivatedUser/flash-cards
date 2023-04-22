@@ -49,5 +49,75 @@ const vueFlashcards = [
     question: 'What is Vue Router and how does it work?',
     answer: 'Vue Router is the official routing library for Vue.js. It enables navigation, manages routes, and maps them to components, handling transitions, and maintaining a history of navigation events.'
     },
-    ];
+    {
+        id: '11',
+        question: 'What are Vue.js slots and how are they used?',
+        answer: 'Slots are placeholders in a Vue component that allow content to be injected from parent components. They enable the creation of reusable and flexible components with customizable content.'
+    },
+    {
+        id: '12',
+        question: 'What is the difference between a Vue.js plugin and a mixin?',
+        answer: 'A plugin is a reusable piece of code that can extend or add global functionality to Vue, while a mixin is a reusable piece of Vue component logic that can be merged into individual components.'
+    },
+    {
+        id: '13',
+        question: 'How do you create transitions and animations in Vue.js?',
+        answer: 'Vue.js provides the transition and transition-group components to create CSS transitions and animations for elements or components when they are inserted, updated, or removed from the DOM.'
+    },
+    {
+        id: '14',
+        question: 'What is server-side rendering (SSR) in Vue.js and why is it used?',
+        answer: 'SSR is the process of rendering Vue.js components on the server and sending the rendered HTML to the client. It improves performance, SEO, and the initial loading experience for users.'
+    },
+    {
+        id: '15',
+        question: 'How do you use Vue.js filters?',
+        answer: 'Filters are used to apply common text formatting within Vue.js templates. They can be applied using the pipe symbol (|) in expressions or in v-bind and v-model directives.'
+    },
+    {
+        id: '16',
+        question: 'How do you validate props in Vue.js components?',
+        answer: 'Props validation is done using the "props" option in a component definition, where you can specify the type, required status, default value, and custom validation functions for each prop.'
+    },
+    {
+        id: '17',
+        question: 'What is scoped CSS in Vue.js components?',
+        answer: 'Scoped CSS is a feature that limits the styles in a Vue.js single-file component to only affect that component, preventing global style leaks and ensuring style encapsulation.'
+    },
+    {
+        id: '18',
+        question: 'What is the provide/inject pattern in Vue.js?',
+        answer: 'The provide/inject pattern is a way to pass data from an ancestor component to its descendants without using props. The ancestor component provides the data, and the descendant components can inject it.'
+    },
+    {
+        id: '19',
+        question: 'What are custom events in Vue.js and how are they used?',
+        answer: 'Custom events are user-defined events in Vue.js used for communication from child components to parent components. Child components emit events using $emit, while parent components listen for events using v-on or @event.'
+    },
+    {
+        id: '20',
+        question: 'How do you handle errors in Vue.js?',
+        answer: 'Error handling in Vue.js can be done using try-catch blocks, Vue.config.errorHandler, errorCaptured lifecycle hook, or custom error handling components that use scoped slots to display errors.'
+    },
+    {
+        id: '21',
+        question: 'What is the role of Vue.js directives?',
+        answer: 'Directives are used to attach special reactive behaviors to the DOM elements in Vue.js templates. They enable dynamic updates to the DOM when the underlying data changes.'
+    },
+    {
+        id: '22',
+        question: 'What are dynamic components in Vue.js?',
+        answer: 'Dynamic components are used to dynamically switch between different components at runtime using the reserved <component> tag with the "is" attribute, which is bound to a data property that determines the component to render.'
+    },
+    {
+        id: '23',
+        question: 'How do you manage local state in Vue.js components?',
+        answer: 'Local state is managed using the "data" function in a Vue.js component. The function returns an object containing the initial state properties, which can be accessed and updated within the component instance.'
+    },
+    {
+        id: '24',
+        question: 'How do you make API calls in a Vue.js application?',
+        answer: 'API calls in Vue.js applications can be made using libraries like Axios or the native Fetch API. API calls are typically performed within component methods, lifecycle hooks, or Vuex actions, depending on the application structure and requirements.'
+    }
+];
     export default vueFlashcards;
