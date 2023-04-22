@@ -20,6 +20,7 @@ import angularQuiz from './data/angularQuiz';
 import cssQuiz from './data/cssQuiz';
 import htmlQuiz from './data/htmlQuiz';
 import webSecurity from './data/webSecurity';
+import webAPIFlashcards from './data/webAPI';
 import Quiz from './components/Quiz';
 
 function App() {
@@ -42,7 +43,8 @@ function App() {
     { id: '10', name: 'Vue' },
     { id: '11', name: 'Interview Prep'},
     { id: '12', name: 'Interview Prep Questions' },
-    { id: '13', name: 'Web Security'}
+    { id: '13', name: 'Web Security'},
+    { id: '14', name: 'Web APIs'}
     // Add more categories here
   ];
 
@@ -178,6 +180,14 @@ function App() {
         {
         heading: 'Web Security',
         flashcards: webSecurity,
+        }
+      ]
+    }
+    if (selectedCategory === '14') {
+      return [
+        {
+        heading: 'Web APIs',
+        flashcards: webAPIFlashcards,
         }
       ]
     }
