@@ -27,6 +27,9 @@ import testAndDebugFlashcards from './data/testAndDebug';
 import versionControlFlashcards from './data/versionControl';
 import typescriptFlashcards from './data/typescript';
 import progressiveWebAPIFlashcards from './data/progressiveWebAPI';
+import serverSideRenderingFlashcards from './data/serverSideRendering';
+import graphQLFlashcards from './data/graphQL';
+import uxUIFlashcards from './data/uxUI';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
@@ -54,7 +57,10 @@ function App() {
     { id: '16', name: 'Testing and Debugging'},
     { id: '17', name: 'Version Control'},
     { id: '18', name: 'TypeScript'},
-    { id: '19', name: 'Progressive Web APIs'}
+    { id: '19', name: 'Progressive Web APIs'},
+    { id: '20', name: 'Server-side Rendering' },
+    { id: '21', name: 'GraphQL'},
+    { id: '22', name: 'UX / UI'}
     // Add more categories here
   ];
 
@@ -238,6 +244,30 @@ function App() {
         {
         heading: 'Progressive Web APIs',
         flashcards: progressiveWebAPIFlashcards,
+        }
+      ]
+    }
+    if (selectedCategory === '20') {
+      return [
+        {
+        heading: 'Server-Side Rendering',
+        flashcards: serverSideRenderingFlashcards,
+        }
+      ]
+    }
+    if (selectedCategory === '21') {
+      return [
+        {
+        heading: 'GraphQL',
+        flashcards: graphQLFlashcards,
+        }
+      ]
+    }
+    if (selectedCategory === '22') {
+      return [
+        {
+        heading: 'UX / UI',
+        flashcards: uxUIFlashcards,
         }
       ]
     }
