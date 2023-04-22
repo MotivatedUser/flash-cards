@@ -32,6 +32,8 @@ import graphQLFlashcards from './data/graphQL';
 import uxUIFlashcards from './data/uxUI';
 import designPatternsQuiz from './data/designPatternsQuiz';
 import javascriptQuiz from './data/javascriptQuiz';
+import nodeQuiz from './data/nodeQuiz';
+import performanceQuiz from './data/performanceQuiz';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('1');
@@ -48,7 +50,9 @@ function App() {
     { id: '5', name: 'JavaScript' },
     { id: '105', name: 'JavaScript Quiz'},
     { id: '6', name: 'Node.js' },
+    {id: '106', name: 'Node.js Quiz' },
     { id: '7', name: 'Performance' },
+    { id: '107', name: 'Performance Quiz' },
     { id: '8', name: 'React' },
     { id: '9', name: 'Responsive' },
     { id: '10', name: 'Vue' },
@@ -290,6 +294,10 @@ function App() {
             return htmlQuiz;
           case '105':
             return javascriptQuiz;
+          case '106':
+            return nodeQuiz;
+          case '107':
+            return performanceQuiz
           case '115':
             return designPatternsQuiz;
           // Add more cases for other quiz categories
