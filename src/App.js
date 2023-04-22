@@ -19,6 +19,7 @@ import accessibilityQuiz from './data/accessibilityQuiz';
 import angularQuiz from './data/angularQuiz';
 import cssQuiz from './data/cssQuiz';
 import htmlQuiz from './data/htmlQuiz';
+import webSecurity from './data/webSecurity';
 import Quiz from './components/Quiz';
 
 function App() {
@@ -40,7 +41,8 @@ function App() {
     { id: '9', name: 'Responsive' },
     { id: '10', name: 'Vue' },
     { id: '11', name: 'Interview Prep'},
-    { id: '12', name: 'Interview Prep Questions' }
+    { id: '12', name: 'Interview Prep Questions' },
+    { id: '13', name: 'Web Security'}
     // Add more categories here
   ];
 
@@ -169,6 +171,14 @@ function App() {
           heading:'Behavioral',
           flashcards: behavioralQuestions,
         },
+      ]
+    }
+    if (selectedCategory === '13') {
+      return [
+        {
+        heading: 'Web Security',
+        flashcards: webSecurity,
+        }
       ]
     }
   }
