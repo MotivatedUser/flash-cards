@@ -52,6 +52,9 @@ import testAndDebugQuiz from "./data/testAndDebugQuiz";
 import versionControlQuiz from "./data/versionControlQuiz";
 import typescriptQuiz from "./data/typescriptQuiz";
 import progressiveWebAPIQuiz from "./data/pwiQuiz";
+import serverSideRenderingQuiz from "./data/serverSideRenderingQuiz";
+import graphQLQuiz from "./data/graphQLQuiz";
+import uiUXQuiz from "./data/uiUxQuiz";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("1");
@@ -80,15 +83,15 @@ function App() {
     { id: "11", name: "Interview Prep" },
     { id: "12", name: "Interview Prep Questions" },
     { id: "13", name: "Web Security" },
-    { id: '113', name: 'Web Security Quiz' },
+    { id: "113", name: "Web Security Quiz" },
     { id: "14", name: "Web APIs" },
-    { id: "114", name: "Web API's Quiz"},
+    { id: "114", name: "Web API's Quiz" },
     { id: "15", name: "Design Patterns" },
     { id: "115", name: "Design Patterns Quiz" },
     { id: "16", name: "Testing and Debugging" },
-    { id: '116', name: 'Test and Debugging Quiz' },
+    { id: "116", name: "Test and Debugging Quiz" },
     { id: "17", name: "Version Control" },
-    { id: '117', name: 'Version Control Quiz' },
+    { id: "117", name: "Version Control Quiz" },
     { id: "18", name: "TypeScript" },
     { id: "118", name: "TypeScript Quiz" },
     { id: "19", name: "Progressive Web APIs" },
@@ -97,8 +100,8 @@ function App() {
     { id: "120", name: "Server-side Rendering Quiz" },
     { id: "21", name: "GraphQL" },
     { id: "121", name: "GraphQL Quiz" },
-    { id: "22", name: "UX / UI" }, 
-    { id: "222", name: "UX / UI Quiz" },
+    { id: "22", name: "UX / UI" },
+    { id: "122", name: "UX / UI Quiz" },
     // Add more categories here
   ];
 
@@ -332,11 +335,11 @@ function App() {
         return reactQuiz;
       case "109":
         return responsiveQuiz;
-      case '110':
+      case "110":
         return vueQuiz;
-      case '113':
+      case "113":
         return webSecurityQuiz;
-      case '114':
+      case "114":
         return webAPIQuiz;
       case "115":
         return designPatternsQuiz;
@@ -348,6 +351,12 @@ function App() {
         return typescriptQuiz;
       case "119":
         return progressiveWebAPIQuiz;
+      case "120":
+        return serverSideRenderingQuiz;
+      case "121":
+        return graphQLQuiz;
+      case "122":
+        return uiUXQuiz;
       // Add more cases for other quiz categories
       default:
         return [];
